@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.back {
+  background-image: url(../img/Empress_Ballroom_Winter_Gardens_Blackpool.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.back::after {
+  content: "";
+  background-color: rgb(196, 242, 255);
+  opacity: 0.7;
+}
+
+.back,
+.back::after {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vw;
+}
+.container--2 {
+    background-color: rgba(214, 254, 241, 0.6);
+}

@@ -54,7 +54,7 @@
 
         </div>
       </div>
-      <div class="row">
+      <div class="row ms-2 me-2">
 
         <div class="col-xxl-6 col-xl-9 py-5 mb-4">
 
@@ -148,34 +148,33 @@
           </div>
         </div>
 
-        <div class="col-xxl-3 col-xl-12 col-lg-6 py-5 mb-4 container--2">
+        <div class="col-xxl-3 col-xl-12 col-lg-6 py-5 px-4 mb-4 container--2">
 
-          <form>
+          <form action="https://tests.fomenko.top/echo/index.php" method="GET">
             <div class="row mb-3">
               <label for="email" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Введите е-mail">
               </div>
             </div>
             <div class="row mb-3">
               <label for="name" class="col-sm-2 col-form-label">Ім'я</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Ваше ім'я">
               </div>
             </div>
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Стиль</legend>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
-                    checked>
-                  <label class="form-check-label" for="gridRadios1">
+                  <input class="form-check-input" type="radio" name="style" id="ballroom" value="st" checked>
+                  <label class="form-check-label" for="ballroom">
                     Стандарт
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                  <label class="form-check-label" for="gridRadios2">
+                  <input class="form-check-input" type="radio" name="style" id="latin" value="latin">
+                  <label class="form-check-label" for="latin">
                     Латина
                   </label>
                 </div>
@@ -187,7 +186,7 @@
               <div class="row mb-3">
                 <div class="col-sm-10 offset-sm-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check1">
+                    <input class="form-check-input" type="checkbox" id="check1" name="standart" value="on">
                     <label class="form-check-label" for="check1">
                       Стандарт
                     </label>
@@ -197,7 +196,7 @@
               <div class="row mb-3">
                 <div class="col-sm-10 offset-sm-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check2">
+                    <input class="form-check-input" type="checkbox" id="check2" name="latin" value="on">
                     <label class="form-check-label" for="check2">
                       Латина
                     </label>
@@ -207,7 +206,7 @@
               <div class="row mb-3">
                 <div class="col-sm-10 offset-sm-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check3">
+                    <input class="form-check-input" type="checkbox" id="check3" name="flamenco" value="on">
                     <label class="form-check-label" for="check3">
                       Фламенко
                     </label>
@@ -217,25 +216,27 @@
               <div class="row mb-3">
                 <div class="col-sm-10 offset-sm-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="check4">
+                    <input class="form-check-input" type="checkbox" id="check4" name="jazz" value="on">
                     <label class="form-check-label" for="check4">
                       Джазовки
                     </label>
                   </div>
                 </div>
               </div>
-              <select class="form-select form-select-sm mb-4" aria-label=".form-select-sm example">
+              <label for="you">Ви:</label>
+              <select name="you" id="you" class="form-select form-select-sm mb-4" aria-label=".form-select-sm example">
                 <option selected>Ви:</option>
-                <option value="1">танцюрист</option>
-                <option value="2">один з батьків</option>
-                <option value="3">тренер</option>
+                <option value="dancer">танцюрист</option>
+                <option value="parent">один з батьків</option>
+                <option value="trainer">тренер</option>
               </select>
             </fieldset>
 
+            <label for="like" class="form-label">Подобається сайт? :-)</label>
+            <input type="range" class="form-range" id="like" min="0" max="10" step="1" name="like"
+              value="valueAsNumber">
+            <button type="submit" class="btn btn-primary">Відправити</button>
           </form>
-          <label for="like" class="form-label">Подобається сайт? :-)</label>
-          <input type="range" class="form-range" id="like">
-          <button type="submit" class="btn btn-primary">Відправити</button>
         </div>
       </div>
 
